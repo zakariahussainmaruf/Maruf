@@ -1,0 +1,109 @@
+{
+  "entities": {
+    "Result": {
+      "title": "Test Result",
+      "description": "Stores the results of tests taken by students.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userName": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "userId": { "type": "string" },
+        "testName": { "type": "string" },
+        "type": { "type": "string", "enum": ["Reading", "Listening", "Writing", "Mock"] },
+        "rawScore": { "type": "number" },
+        "totalQuestions": { "type": "number" },
+        "bandScore": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "breakdown": { "type": "array" },
+        "feedback": { "type": "string" },
+        "graded": { "type": "boolean" }
+      },
+      "required": ["userId", "userEmail", "testName", "type", "date"]
+    },
+    "QuestionBank": {
+      "title": "Question Bank",
+      "description": "Repository for reading, listening, and writing questions.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["reading", "listening", "writing"] },
+        "difficulty": { "type": "string" },
+        "time": { "type": "number" },
+        "finalizedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "type"]
+    },
+    "Test": {
+      "title": "Test",
+      "description": "Partial or Mock tests created by admin.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string", "enum": ["partial", "mock"] },
+        "difficulty": { "type": "string" },
+        "finalizedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "type"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "Global notifications for students.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "message": { "type": "string" },
+        "type": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["message", "createdAt"]
+    },
+    "LabAssignment": {
+      "title": "Lab Assignment",
+      "description": "Assignments for specific labs.",
+      "type": "object",
+      "properties": {
+        "lab": { "type": "string" },
+        "book": { "type": "number" },
+        "track": { "type": "string" },
+        "assignedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "SiteConfig": {
+      "title": "Site Configuration",
+      "description": "Global site settings like logo, social links, and gallery.",
+      "type": "object",
+      "properties": {
+        "value": { "type": "object" }
+      }
+    }
+  },
+  "firestore": {
+    "/results/{resultId}": {
+      "schema": "Result",
+      "description": "Collection of student test results."
+    },
+    "/question_bank/{questionId}": {
+      "schema": "QuestionBank",
+      "description": "Collection of questions for reading, listening, and writing."
+    },
+    "/tests/{testId}": {
+      "schema": "Test",
+      "description": "Collection of partial and mock tests."
+    },
+    "/notifications/{notificationId}": {
+      "schema": "Notification",
+      "description": "Collection of global notifications."
+    },
+    "/lab_assignments/{assignmentId}": {
+      "schema": "LabAssignment",
+      "description": "Collection of lab assignments."
+    },
+    "/site_config/{configId}": {
+      "schema": "SiteConfig",
+      "description": "Collection of site configuration documents (logo, gallery, social_links, posters)."
+    }
+  }
+}

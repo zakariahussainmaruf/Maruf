@@ -1,28 +1,91 @@
-# Hi there, I'm Maruf! 👋
+# 📚 LearningHub — IELTS Preparation Platform
 
-🚀 Full Stack Web Developer from Bangladesh
+A comprehensive full-stack education platform for IELTS preparation built with React, TypeScript, Firebase, and Tailwind CSS.
+
+## 🚀 Features
+
+- 🔐 Authentication (Email/Password + Google Sign-In)
+- 📝 Practice Tests with detailed feedback
+- 📖 Module Study Pages
+- 🎯 Personalized Study Plans
+- 👑 Admin Panel
+- 👤 User Dashboard
+- 🔔 Notification System
+- 🎨 Beautiful UI with animations
 
 ## 🛠️ Tech Stack
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- **Frontend:** React 19, TypeScript, Tailwind CSS
+- **Backend/DB:** Firebase (Auth + Firestore)
+- **Build Tool:** Vite
+- **Animations:** Custom CSS animations
 
-## 👨‍💻 About Me
+## ⚙️ Getting Started
 
-- 💼 Full Stack Developer at **Forrovia**
-- 🌱 Always learning new technologies
-- 💡 Passionate about clean UI & high-performance web apps
-- 🌍 Open to **remote work** opportunities
-- 📫 Reach me on [LinkedIn](https://linkedin.com/in/zakariahussainmaruf)
+### Prerequisites
+- Node.js 18+
+- A Firebase project
 
-## 📊 GitHub Stats
+### Installation
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=zakariahussainmaruf&layout=compact&theme=tokyonight)
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/zakariahussainmaruf/learninghub.git
+   cd learninghub
+   \`\`\`
 
-![Maruf's GitHub Stats](https://github-readme-stats.vercel.app/api?username=zakariahussainmaruf&show_icons=true&theme=tokyonight&count_private=true)
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. Create a \`.env.local\` file and add your Firebase config:
+   \`\`\`env
+   VITE_FIREBASE_API_KEY=your_api_key
+   VITE_FIREBASE_AUTH_DOMAIN=your_auth_domain
+   VITE_FIREBASE_PROJECT_ID=your_project_id
+   VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
+   VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+   VITE_FIREBASE_APP_ID=your_app_id
+   \`\`\`
+
+4. Run the development server:
+   \`\`\`bash
+   npm run dev
+   \`\`\`
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 📁 Project Structure
+
+\`\`\`
+├── components/
+│   ├── AdminPanel.tsx
+│   ├── AuthModal.tsx
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── ServicesPage.tsx
+│   ├── UserPanel.tsx
+│   └── ...
+├── src/
+│   └── lib/
+│       └── firebase.ts
+├── App.tsx
+├── index.tsx
+└── index.html
+\`\`\`
+
+## 🔧 Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| VITE_FIREBASE_API_KEY | Firebase API Key |
+| VITE_FIREBASE_AUTH_DOMAIN | Firebase Auth Domain |
+| VITE_FIREBASE_PROJECT_ID | Firebase Project ID |
+
+## 👨‍💻 Developer
+
+**Zakaria Hussain Maruf** — Full Stack Web Developer
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/zakariahussainmaruf)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zakariahussainmaruf)
